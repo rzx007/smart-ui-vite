@@ -26,6 +26,9 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.vue\"",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{vue,js,ts,tsx,jsx}": "eslint --fix"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
