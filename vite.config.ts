@@ -5,11 +5,7 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import Unocss from "./config/unocss";
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    vueJsx(),
-    Unocss(),
-  ],
+  plugins: [vue(), vueJsx(), Unocss()],
   build: {
     rollupOptions: {
       external: ["vue", "vue-router"],
@@ -20,8 +16,9 @@ export default defineConfig({
         },
       },
     },
-    minify: false,
+    minify: "terser",
     cssCodeSplit: true,
+    sourcemap: true, // 输出单独 source文件
     lib: {
       entry: resolve(__dirname, "./src/entry.ts"),
       name: "SmartUI",
