@@ -57,6 +57,7 @@
     "vitest": "^0.23.4"
   },
   "dependencies": {
+    "lint-staged": "^13.0.3",
     "vue": "3.2.39"
   }
 }
